@@ -14,7 +14,14 @@ def barajar(self):
 def repartir(self, numJugadores, numCartas):
     jugadores = []
     for i in range(numeroJugadores):
-        
+        jugadores.append([])
+    
+    for carta in range(numCartas):
+        for jugador in range(numJugadores):
+            jugadores[jugador].append(self.mazacote.pop(0))
+            
+    return jugadores
+
 
 
 
