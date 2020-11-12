@@ -10,46 +10,14 @@ def creaBaraja():
             baraja.append(numero + palo)
     return baraja
 
-def barajar():
-    baraja = creaBaraja()
-    for i in range(40):
-        if baraja[i] != baraja[i]:
-            baraja = baraja.append(baraja[i])
-        else:
-            pass
-    return baraja
+def intercambio(a,b):
+    aux = a
+    a = b
+    b = aux
 
-
-prueba = barajar()
-print(prueba)
-
-
-'''        
-    baraja = random.choices(baraja, k=40)
-
-    return baraja
-
-
-cartasBarajadas = barajar(creaBaraja)
-print(cartasBarajadas)
-
-    
-
-cartasMovidas = barajar(creaBaraja)
-
-print(cartasMovidas)'''
-
-
-
-'''
-def creaJugador():
-    newPlayers = []
-    for i in range(3):
-        newPlayers.append("NewPlayer" + str(i))
-    return newPlayers
-
-
-jugadores = creaJugador()
-baraja = creaBaraja()
-
-print("El jugador {} tiene la carta: {}".format(random.choice(jugadores), random.choice(baraja)))'''
+def barajar(lista_de_naipes):
+    for i in range(len(lista_de_naipes)):
+        nueva_pos: random.randrange(len(lista_de_naipes))
+        aux = lista_de_naipes[nueva_pos]
+        lista_de_naipes[nueva_pos] = lista_de_naipes[i]
+        lista_de_naipes[i] = aux
